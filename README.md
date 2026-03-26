@@ -1,18 +1,16 @@
 # COSMIC-SigProfilerAssignment-Pipeline
 An automated, interactive Python pipeline for extracting COSMIC mutational signatures from VCF files.
 
-A streamlined, interactive Python wrapper for the [SigProfilerAssignment]([https://github.com/AlexandrovLab](https://github.com/SigProfilerSuite/SigProfilerAssignment)). 
+A streamlined Python wrapper for the Alexandrov Lab's [SigProfilerAssignment](https://github.com/SigProfilerSuite/SigProfilerAssignment). 
 
-This script uses COSMIC version 3.4. 
+This script automates the extraction of Single Base Substitution (SBS), Double Base Substitution (DBS), and small Insertion/Deletion (InDel) COSMIC mutational signatures (v3.4) directly from somatic VCF files. 
 
-It automates the extraction of Single Base Substitution (SBS), Double Base Substitution (DBS), and small Insertion/Deletion (InDel) COSMIC mutational signatures directly from somatic VCF files.
+In short, `SigProfilerMatrixGenerator` is used to create mutational matrices for all types of somatic mutations, per sample. Then, `SigProfilerAssignment` is used to assign known mutational signatures to those individual samples.
 
-## Features
+## ✨ Features
 * **Interactive CLI:** Prompts the user for input/output directories, reference genomes, and WES/WGS sequencing types.
 * **Genome Management:** Automatically checks for and installs the required reference genome (e.g., GRCh38) if it is missing.
-* **High Efficiency:** Decouples matrix generation from signature fitting. Matrices are generated exactly *once* per sample, drastically reducing I/O overhead.
-* **Dynamic Handling:** Automatically adjusts file extensions and parameters based on whether the data is Whole Exome (WES) or Whole Genome (WGS).
-* **Silent Mode & Clean Logging:** Suppresses the massive console output from SigProfiler tools, redirecting it to sample-specific `.log` files to keep your terminal clean while preserving troubleshooting data.
+* **Clean Per-Sample Logs:** Suppresses the massive console output from SigProfiler tools, redirecting it to sample-specific `.log` files to keep your terminal clean while preserving troubleshooting data.
 * **Automated Housekeeping:** Cleans up temporary VCF copies and intermediate matrix folders to save disk space after each sample finishes.
 
 ## 🛠️ Installation
