@@ -46,7 +46,7 @@ The script will launch an interactive prompt asking for:
 * The reference genome build (Default: GRCh38).
 * Your sequencing type (WES or WGS, Default: WES)
 
-**4. Output Structure**
+## **Output Structure**
 The script generates a master folder for every successfully processed sample in your output directory. Inside each sample's folder, you will find:
 ```text
 Output_Directory/
