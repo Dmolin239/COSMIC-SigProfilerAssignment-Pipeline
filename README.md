@@ -7,13 +7,13 @@ This script automates the extraction of Single Base Substitution (SBS), Double B
 
 In short, `SigProfilerMatrixGenerator` is used to create mutational matrices for all types of somatic mutations, per sample. Then, `SigProfilerAssignment` is used to assign known mutational signatures to those individual samples.
 
-## ✨ Features
+## Features
 * **Interactive CLI:** Prompts the user for input/output directories, reference genomes, and WES/WGS sequencing types.
 * **Genome Management:** Automatically checks for and installs the required reference genome (e.g., GRCh38) if it is missing.
 * **Clean Per-Sample Logs:** Suppresses the massive console output from SigProfiler tools, redirecting it to sample-specific `.log` files to keep your terminal clean while preserving troubleshooting data.
 * **Automated Housekeeping:** Cleans up temporary VCF copies and intermediate matrix folders to save disk space after each sample finishes.
 
-## 🛠️ Installation
+## Installation
 
 **1. Clone the repository:**
 ```bash
